@@ -1,0 +1,71 @@
+Dependencies for Project 'SpaceInvaders', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6220000::V6.22::ARMCLANG
+F (.\main.c)(0x6694A2BA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-I"C:/Users/Vu Duy Phuong/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"C:/Users/Vu Duy Phuong/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include"-D__UVISION_VERSION="540" -DSTM32F10X_MD -D_RTE_-o ./objects/main.o -MMD)
+I (PLL.h)(0x6694A2BA)
+I (ADC.h)(0x6694A2B9)
+I (UART.h)(0x6694A2BA)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x665AE3D1)
+I (RTE\_Target_1\RTE_Components.h)(0x6694A2BC)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x665AE4E3)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x665AE3D1)
+I (IO.h)(0x6694A2BA)
+I (Timer.h)(0x6694A2BA)
+I (UART2_INIT.h)(0x6694A2BA)
+I (SysTick.h)(0x6694A2BA)
+F (.\ADC.c)(0x6694A2B9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-I"C:/Users/Vu Duy Phuong/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"C:/Users/Vu Duy Phuong/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include"-D__UVISION_VERSION="540" -DSTM32F10X_MD -D_RTE_-o ./objects/adc.o -MMD)
+I (ADC.h)(0x6694A2B9)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x665AE3D1)
+I (RTE\_Target_1\RTE_Components.h)(0x6694A2BC)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x665AE4E3)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x665AE3D1)
+F (.\Timer.c)(0x6694A2BA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-I"C:/Users/Vu Duy Phuong/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"C:/Users/Vu Duy Phuong/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include"-D__UVISION_VERSION="540" -DSTM32F10X_MD -D_RTE_-o ./objects/timer.o -MMD)
+I (Timer.h)(0x6694A2BA)
+I (IO.h)(0x6694A2BA)
+I (ADC.h)(0x6694A2B9)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x665AE3D1)
+I (RTE\_Target_1\RTE_Components.h)(0x6694A2BC)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x665AE4E3)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x665AE3D1)
+F (.\IO.c)(0x6694A2BA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-I"C:/Users/Vu Duy Phuong/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"C:/Users/Vu Duy Phuong/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include"-D__UVISION_VERSION="540" -DSTM32F10X_MD -D_RTE_-o ./objects/io.o -MMD)
+I (IO.h)(0x6694A2BA)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x665AE3D1)
+I (RTE\_Target_1\RTE_Components.h)(0x6694A2BC)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x665AE4E3)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x665AE3D1)
+I (UART.h)(0x6694A2BA)
+I (UART2_INIT.h)(0x6694A2BA)
+F (.\UART.c)(0x6694A2BA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-I"C:/Users/Vu Duy Phuong/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"C:/Users/Vu Duy Phuong/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include"-D__UVISION_VERSION="540" -DSTM32F10X_MD -D_RTE_-o ./objects/uart.o -MMD)
+I (UART.h)(0x6694A2BA)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x665AE3D1)
+I (RTE\_Target_1\RTE_Components.h)(0x6694A2BC)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x665AE4E3)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x665AE3D1)
+F (.\PLL.c)(0x6694A2BA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-I"C:/Users/Vu Duy Phuong/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"C:/Users/Vu Duy Phuong/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include"-D__UVISION_VERSION="540" -DSTM32F10X_MD -D_RTE_-o ./objects/pll.o -MMD)
+I (PLL.h)(0x6694A2BA)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x665AE3D1)
+I (RTE\_Target_1\RTE_Components.h)(0x6694A2BC)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x665AE4E3)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x665AE3D1)
+F (.\UART.s)(0x6694A2BA)(--cpu Cortex-M3 -g --diag_suppress=A1950W -I ..\Lab10_SpaceInvaders-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-I"C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include"-I"C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include"--pd "__UVISION_VERSION SETA 540"--pd "STM32F10X_MD SETA 1"--pd "_RTE_ SETA 1"--list .\listings\uart.lst--xref -o .\objects\uart_1.o--depend .\objects\uart_1.d)
+F (.\UART2_INIT.s)(0x6694A2BA)(--cpu Cortex-M3 -g --diag_suppress=A1950W -I ..\Lab10_SpaceInvaders-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-I"C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include"-I"C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include"--pd "__UVISION_VERSION SETA 540"--pd "STM32F10X_MD SETA 1"--pd "_RTE_ SETA 1"--list .\listings\uart2_init.lst--xref -o .\objects\uart2_init.o--depend .\objects\uart2_init.d)
+F (.\UART2_INIT.h)(0x6694A2BA)()
+F (.\uart2_functions.s)(0x6694E856)(--cpu Cortex-M3 -g --diag_suppress=A1950W -I ..\Lab10_SpaceInvaders-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-I"C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include"-I"C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include"--pd "__UVISION_VERSION SETA 540"--pd "STM32F10X_MD SETA 1"--pd "_RTE_ SETA 1"--list .\listings\uart2_functions.lst--xref -o .\objects\uart2_functions.o--depend .\objects\uart2_functions.d)
+F (.\SYSTICK.c)(0x6694A2BA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-I"C:/Users/Vu Duy Phuong/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"C:/Users/Vu Duy Phuong/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include"-D__UVISION_VERSION="540" -DSTM32F10X_MD -D_RTE_-o ./objects/systick.o -MMD)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x665AE3D1)
+I (RTE\_Target_1\RTE_Components.h)(0x6694A2BC)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x665AE4E3)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x665AE3D1)
+I (SysTick.h)(0x6694A2BA)
+F (.\SysTick.h)(0x6694A2BA)()
+F (.\ADC.h)(0x6694A2B9)()
+F (.\Timer.h)(0x6694A2BA)()
+F (.\IO.h)(0x6694A2BA)()
+F (.\UART.h)(0x6694A2BA)()
+F (.\PLL.h)(0x6694A2BA)()
+F (RTE/Device/STM32F103C8/RTE_Device.h)(0x6694A2BC)()
+F (RTE/Device/STM32F103C8/startup_stm32f10x_md.s)(0x6694A2BC)(--cpu Cortex-M3 -g --diag_suppress=A1950W -I ..\Lab10_SpaceInvaders-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-I"C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include"-I"C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include"--pd "__UVISION_VERSION SETA 540"--pd "STM32F10X_MD SETA 1"--pd "_RTE_ SETA 1"--list .\listings\startup_stm32f10x_md.lst--xref -o .\objects\startup_stm32f10x_md.o--depend .\objects\startup_stm32f10x_md.d)
+F (RTE/Device/STM32F103C8/system_stm32f10x.c)(0x6694A2BC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-I"C:/Users/Vu Duy Phuong/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include"-I"C:/Users/Vu Duy Phuong/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include"-D__UVISION_VERSION="540" -DSTM32F10X_MD -D_RTE_-o ./objects/system_stm32f10x.o -MMD)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x665AE3D1)
+I (RTE\_Target_1\RTE_Components.h)(0x6694A2BC)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x665AE4E3)
+I (C:\Users\Vu Duy Phuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x665AE3D1)

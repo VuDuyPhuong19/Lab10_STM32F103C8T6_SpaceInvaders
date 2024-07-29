@@ -1,0 +1,208 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             |.text|, CODE, READONLY ; Defin
+                                                            e the area for the 
+                                                            code
+    2 00000000                 THUMB                        ; Specify that this
+                                                             is THUMB code
+    3 00000000         
+    4 00000000                 EXPORT           UART1_Init_A ; Make UART1_Init 
+                                                            available externall
+                                                            y
+    5 00000000         
+    6 00000000         UART1_Init_A
+    7 00000000         ;    PUSH {r4, lr}          ; Save registers that will b
+                       e used
+    8 00000000         
+    9 00000000         ;    ; Enable UART1 clock
+   10 00000000         ;    LDR r1, =0x40021018    ; RCC->APB2ENR address
+   11 00000000         ;    LDR r0, [r1]           ; Load current value of RCC-
+                       >APB2ENR
+   12 00000000         ;    ORR r0, r0, #(1 << 14) ; Set bit 14
+   13 00000000         ;    STR r0, [r1]           ; Store back to RCC->APB2ENR
+                       
+   14 00000000         
+   15 00000000         ;    ; Enable GPIOA clock
+   16 00000000         ;    LDR r0, [r1]           ; Load current value of RCC-
+                       >APB2ENR
+   17 00000000         ;    ORR r0, r0, #(1 << 2)  ; Set bit 2
+   18 00000000         ;    STR r0, [r1]           ; Store back to RCC->APB2ENR
+                       
+   19 00000000         
+   20 00000000         ;    ; Configure PA9 and PA10 
+   21 00000000         ;    LDR r1, =0x40010804    ; GPIOA->CRH address
+   22 00000000         ;    LDR r0, [r1]           ; Load current value of GPIO
+                       A->CRH
+   23 00000000         ;    BIC r0, r0, #(0xFF << 4) ; Clear configuration bits
+                        for PA9 and PA10
+   24 00000000         ;    ORR r0, r0, #(0xB << 4) ; Set PA9 as alternate func
+                       tion push-pull
+   25 00000000         ;    ORR r0, r0, #(0x4 << 8) ; Set PA10 as input floatin
+                       g
+   26 00000000         ;    STR r0, [r1]           ; Store back to GPIOA->CRH
+   27 00000000         
+   28 00000000         ;    ; Enable USART1, configure word length, stop bits a
+                       nd baud rate
+   29 00000000         ;    LDR r1, =0x4001380C    ; USART1->CR1 address
+   30 00000000         ;    MOV r0, #0x200C        ; Enable USART, 8 data bits,
+                        enable receiver and transmitter
+   31 00000000         ;    STR r0, [r1]
+   32 00000000         
+   33 00000000         ;    LDR r1, =0x40013810    ; USART1->CR2 address
+   34 00000000         ;    MOV r0, #0             ; 1 stop bit
+   35 00000000         ;    STR r0, [r1]
+   36 00000000         
+   37 00000000         ;    LDR r1, =0x40013808    ; USART1->BRR address
+   38 00000000         ;    MOV r0, #0x0271        ; Baud rate of 115200
+   39 00000000         ;    STR r0, [r1]
+   40 00000000         
+   41 00000000         ;    ; Enable receive interrupt and NVIC
+   42 00000000         ;    LDR r1, =0x4001380C    ; USART1->CR1 address
+   43 00000000         ;    LDR r0, [r1]           ; Load current value of USAR
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+                       T1->CR1
+   44 00000000         ;    ORR r0, r0, #(1 << 5)  ; Enable RXNE interrupt
+   45 00000000         ;    STR r0, [r1]           ; Store back to USART1->CR1
+   46 00000000         
+   47 00000000         ;    LDR r0, =0x00000025    ; USART1_IRQn is 37
+   48 00000000         ;    LDR r1, =0xE000E100    ; NVIC Enable Register addre
+                       ss
+   49 00000000         ;    MOV r2, #1             ; Value to set
+   50 00000000         ;    LSL r2, r2, r0         ; Shift left by interrupt nu
+                       mber
+   51 00000000         ;    STR r2, [r1]           ; Enable interrupt
+   52 00000000         
+   53 00000000         ;    POP {r4, pc}           ; Restore registers and retu
+                       rn
+   54 00000000         ; 
+   55 00000000         ; BX LR ; return
+   56 00000000         ; 
+   57 00000000         ; END
+   58 00000000 B500            PUSH             {lr}        ; Save the link reg
+                                                            ister
+   59 00000002         
+   60 00000002         ; Enable the UART1 clock and GPIOA clock
+   61 00000002 4916            LDR              R1, =0x40021018 ; RCC->APB2ENR
+   62 00000004 6808            LDR              R0, [R1]    ; Load RCC->APB2ENR
+                                                            
+   63 00000006 F450 4080       ORRS             R0, R0, #(1 << 14) ; Set bit 14
+                                                             to enable UART1 cl
+                                                            ock
+   64 0000000A F050 0004       ORRS             R0, R0, #(1 << 2) ; Set bit 2 t
+                                                            o enable GPIOA cloc
+                                                            k
+   65 0000000E 6008            STR              R0, [R1]    ; Store the updated
+                                                             value back to RCC-
+                                                            >APB2ENR
+   66 00000010         
+   67 00000010         ; Configure UART1 pins (PA9 -> TX, PA10 -> RX)
+   68 00000010 4913            LDR              R1, =0x40010804 ; GPIOA->CRH
+   69 00000012 6808            LDR              R0, [R1]    ; Load GPIOA->CRH
+   70 00000014         
+   71 00000014         ;    BIC R0, R0, #(0xFF << 4)         ; Clear configurat
+                       ion bits for PA9 and PA10
+   72 00000014 F020 30FF       BIC              R0, R0, #(0xFFFFFFFF)
+   73 00000018 6008            STR              R0, [R1]
+   74 0000001A 6808            LDR              R0, [R1]
+   75 0000001C F050 00B0       ORRS             R0, R0, #(0xB << 4) ; Set PA9 a
+                                                            s alternate functio
+                                                            n push-pull
+   76 00000020 F450 6080       ORRS             R0, R0, #(0x4 << 8) ; Set PA10 
+                                                            as input floating
+   77 00000024 6008            STR              R0, [R1]    ; Store back to GPI
+                                                            OA->CRH
+   78 00000026         
+   79 00000026         ; Enable USART1, configure word length and stop bits
+   80 00000026 490F            LDR              R1, =0x4001380C ; USART1->CR1
+   81 00000028 F44F 5000       MOV              R0, #0x2000 ; USART Enable bit 
+                                                            (bit 13)
+   82 0000002C 6008            STR              R0, [R1]
+   83 0000002E         
+   84 0000002E 490E            LDR              R1, =0x40013810 ; USART1->CR2
+
+
+
+ARM Macro Assembler    Page 3 
+
+
+   85 00000030 F04F 0000       MOV              R0, #0      ; Clear CR2 (1 stop
+                                                             bit is already cle
+                                                            ar)
+   86 00000034 6008            STR              R0, [R1]
+   87 00000036         
+   88 00000036         ; Set baud rate
+   89 00000036 490D            LDR              R1, =0x40013808 ; USART1->BRR
+   90 00000038 F240 2071       MOV              R0, #0x0271 ; Baud rate of 1152
+                                                            00
+   91 0000003C 6008            STR              R0, [R1]
+   92 0000003E         
+   93 0000003E         ; Enable the Transmitter/Receiver
+   94 0000003E 4909            LDR              R1, =0x4001380C ; USART1->CR1
+   95 00000040 6808            LDR              R0, [R1]
+   96 00000042 F050 0004       ORRS             R0, R0, #(1 << 2) 
+                                                            ; Enable Receiver
+   97 00000046 F050 0008       ORRS             R0, R0, #(1 << 3) ; Enable Tran
+                                                            smitter
+   98 0000004A F050 0020       ORRS             R0, R0, #(1 << 5) ; Enable RXNE
+                                                             Interrupt
+   99 0000004E 6008            STR              R0, [R1]
+  100 00000050         
+  101 00000050         ; Enable UART1 interrupt
+  102 00000050 4907            LDR              R1, =0xE000E100 ; NVIC ISER0
+  103 00000052 F04F 0020       MOV              R0, #(1 << 5) ; USART1_IRQn is 
+                                                            37, ISER0 covers IR
+                                                            Q 0-31
+  104 00000056 6008            STR              R0, [R1]
+  105 00000058         
+  106 00000058 BD00            POP              {pc}        ; Restore the link 
+                                                            register and return
+                                                            
+  107 0000005A         
+  108 0000005A                 END                          ; Mark the end of t
+                                                            his file
+              00 00 40021018 
+              40010804 
+              4001380C 
+              40013810 
+              40013808 
+              E000E100 
+Command Line: --debug --xref --diag_suppress=9931,A1950W --cpu=Cortex-M3 --depe
+nd=.\objects\uart_1.d -o.\objects\uart_1.o -I..\Lab10_SpaceInvaders -I.\RTE\Dev
+ice\STM32F103C8 -I.\RTE\_Target_1 -I"C:\Users\Vu Duy Phuong\AppData\Local\Arm\P
+acks\ARM\CMSIS\6.1.0\CMSIS\Core\Include" -I"C:\Users\Vu Duy Phuong\AppData\Loca
+l\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include" --predefine="__UVISION_VER
+SION SETA 540" --predefine="STM32F10X_MD SETA 1" --predefine="_RTE_ SETA 1" --l
+ist=.\listings\uart.lst UART.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 1 in file UART.s
+   Uses
+      None
+Comment: .text unused
+UART1_Init_A 00000000
+
+Symbol: UART1_Init_A
+   Definitions
+      At line 6 in file UART.s
+   Uses
+      At line 4 in file UART.s
+Comment: UART1_Init_A used once
+2 symbols
+337 symbols in table

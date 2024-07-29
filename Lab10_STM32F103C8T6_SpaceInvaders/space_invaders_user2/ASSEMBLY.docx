@@ -1,0 +1,15 @@
+Phần đầu: Khai báo và thiết lập
+AREA |.text|, CODE, READONLY: Định nghĩa một vùng mã đọc-ghi cho chương trình.
+THUMB: Chỉ định rằng mã này sử dụng chế độ THUMB.
+EXPORT UART2_Init_A: Khai báo hàm UART2_Init_A để có thể sử dụng từ bên ngoài.
+--------------------------------------------------------------------------------
+Hàm khởi tạo UART2
+UART2_Init_A
+    PUSH {lr}                       ; Save the link register
+PUSH {lr}: Lưu giá trị thanh ghi liên kết (Link Register) vào ngăn xếp. Thanh ghi liên kết lưu địa chỉ trở về sau khi thực hiện xong hàm.
+Bật clock cho UART2 và GPIOA
+LDR R1, =0x4002101C: Tải địa chỉ của thanh ghi RCC_APB1ENR vào thanh ghi R1.
+LDR R0, [R1]: Tải giá trị hiện tại của RCC_APB1ENR vào thanh ghi R0.
+ORRS R0, R0, #(1 << 17): Thiết lập bit 17 của RCC_APB1ENR để bật clock cho UART2.
+STR R0, [R1]: Lưu giá trị đã cập nhật trở lại vào RCC_APB1ENR.
+--------------------------------------------------------------------------------
